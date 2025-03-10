@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauren's Live Music Adventures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #7870e4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            padding-bottom: 100px; /* Increase padding to the bottom */
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        footer {
+            background-color: #7870e4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .star {
+            color: gold;
+            font-size: 20px;
+        }
+        .star-empty {
+            color: lightgray;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Lauren's Live Music Adventures</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0);" onclick="showTab('upcoming-shows')">Upcoming Shows</a>
+        <a href="javascript:void(0);" onclick="showTab('past-shows')">Past Shows</a>
+        <a href="javascript:void(0);" onclick="showTab('media')">Media</a>
+        <a href="javascript:void(0);" onclick="showTab('bands')">Bands</a>
+        <a href="javascript:void(0);" onclick="showTab('about-me')">About Me</a>
+        <a href="javascript:void(0);" onclick="showTab('socials')">Socials</a>
+    </nav>
+    <main>
+        <div id="upcoming-shows" class="tab-content active">
+            <h1 style="color: #7870e4;">Upcoming Shows</h1>
+            <p><strong><u>3-15-24 Modern Alibi popup at The Gin Mill</u></strong></p>
+            <p><strong><u>3-20-25 Show 6:30 Lovin' Life Music Fest's Battle of the Bands Ft Willingdon, Too Hot for Leather, and Council Ring at The Brickyard</u></strong></p>
+            <li><a href="https://www.facebook.com/100093373451891/posts/575103485612095/?_rdr" target="_blank">Event Info</a></li>
+            <p><strong><u>3-29-25 Modern Alibi popup at The Brickyard</u></strong></p>
+            <p><strong><u>4-5-25 Modern Alibi popup at The Brickyard</u></strong></p>
+            <p><strong><u>4-11-25 Doors 7:30pm Show 8pm Modern Alibi Ft Sweet Spine at AMOS' Southend</u></strong></p>
+            <li><a href="https://amossouthend.com/event/modern-alibi-with-sweet-spine/amos-southend/charlotte-north-carolina/" target="_blank">Modern Alibi Tix</a></li>
+            <p><strong><u>4-17-25 Doors 7pm Show 8pm OCEANIC Hometown Show at Visulite Theatre</u></strong></p>
+            <li><a href="https://visulite.com/shows/details/showID/10835" target="_blank">Oceanic Tix</a></li>
+            <p><strong><u>4-25-25 Doors 7pm Show 7:30pm Cigarettes @ Sunset ft Willingdon and Yesterdays Clothes at AMOS' Southend</u></strong></p>
+            <li><a href="https://amossouthend.com/event/cigarettes-at-sunset-with-willingdon-yesterdays-clothes/amos-southend/charlotte-north-carolina/" target="_blank">Cigarettes@Sunset Tix</a></li>
+            <p><strong><u>4-30-25 Doors 7pm Show 7:30pm Sawyer Hill ft The Criticals at AMOS' Southend</u></strong></p>
+            <li><a href="https://www.etix.com/ticket/p/65136493/sawyer-hill-charlotte-amossouthend?clickref=1011lAkwavp7" target="_blank">Sawyer Hill Tix</a></li>
+            <p><strong><u>5-2 through 5-4 Lovin' Life Music Festival 2025</u></strong></p>
+            <li><a href="https://lovinlifemusicfest.com/">Event Website</a></li>
+            <li><a href="https://lovinlifemusicfest.com/lineup/">Official Lineup</a></li>
+            <li>Headliners and Well Known Artists: Benson Boone, Teddy Swims, Pitbull, Weezer, Third Eye Blind, Ludacris, Switchfoot, Artikal Sound System, and Mike.</li>
+            <li>Noteable Artists: Lola Young, Dexter and the Moonrocks, Vincent Lima, Weekend Friend and Camisole</li>
+            <li>Use code CAMISOLE10 for 10% off your Ticket</li>
+            <p><strong><u>5-8-25 Doors 6:30pm Show 7:30pm Almost Monday Ft Adrian Lyles at AMOS' Southend</u></strong></p>
+            <li><a href="https://www.etix.com/ticket/p/58955975/almost-monday-charlotte-amossouthend?partner_id=100&_ga=2.207402643.1850655362.1741356929-1524855233.1741356929&_gl=1*fxxsf*_ga*MTUyNDg1NTIzMy4xNzQxMzU2OTI5*_ga_E9BYQN8YHJ*MTc0MTM1NjkyOC4xLjEuMTc0MTM1NzgzOS4wLjAuMA..">Almost Monday Tix</a></li>
+            <p><strong><u>6-5-25 Doors 7pm Show 8pm Anees Homesick Tour at The Fillmore</u></strong></p>
+            <li><a href="https://www.livenation.com/event/G5eVZbNSr8JKt/anees-homesick-tour-2025">Anees Tix</a></li>
+            <p><strong><u>10-24-25 Show 7:30pm Tate McRae Miss Possesive Tour Ft Allesi Rose at Spectrum Center</u></strong></p>
+            <li><a href="https://www.ticketmaster.com/tate-mcrae-miss-possessive-tour-charlotte-north-carolina-10-24-2025/event/2D00624899DE40DD?landing=c">Tate McRae Tix</a></li>
+        </div>
+        <div id="past-shows" class="tab-content">
+            <h1 style="color: #7870e4;">Past Shows</h1>
+            <h3 style="color: #7870e4;">2025</h3>
+            <p><strong><u>2-1-25 Oceanic and Veaux at New Brookland Tavern</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+              <a href="javascript:void(0);" onclick="showTab('media')" class="camera-icon">📷</a>
+            </p>
+            <p><strong><u>2-16-25 Maggie Miles Ft Recess Party and Willa Mae </u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star-empty">⭐</span>
+                <span class="star-empty">⭐</span>
+                <span class="star-empty">⭐</span>
+              </span>
+              <a href="javascript:void(0);" onclick="showTab('media')" class="camera-icon">📷</a>
+            </p>
+            <li>was not in love with the openers -2 stars but Maggie was fantastic</li>
+            <p><strong><u>2-28-25 Bilmuri Ft Ally Nicholas </u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+              <a href="javascript:void(0);" onclick="showTab('media')" class="camera-icon">📷</a>
+            </p>
+            <li>This was one of the most insane shows I have ever been to! The crowd and the energy was phenomenal!!! Probably have some permanent hearing loss form this show who knows lol</li>
+            <h3 style="color: #7870e4;">2024</h3>
+            <p><strong><u>5-3 through 5-5 Lovin' Life Music Festival 2024</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+              <a href="javascript:void(0);" onclick="showTab('media')" class="camera-icon">📷</a>
+            </p>
+            <li>Headliners and Well Known Artists: Post Malone, Noah Kahan, Stevie Nicks, Maggie Rogers, The Chainsmokers, Dominic Fike, Mt.Joy, Young the Giant, Jessie Murph, The Fray,DaBaby and David Kushner</li>
+            <li>Noteable Artists: The Struts, Holly Humberstone, Anees, Nightly, Artikal Sound System, Sweet Spine, Modern Alibi, Natalie Carr, Oceanic, Biking with Francis, Deaf Andrews, Stranger Company</li>
+            <p><strong><u>6-22-24 Modern Alibi Ft Kaska Sun at Visulite Theatre</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+              <a href="javascript:void(0);" onclick="showTab('media')" class="camera-icon">📷</a>
+            </p>
+            <li><a href="https://www.youtube.com/watch?v=CS7DropThoA">I literally ended up in their music video!! click here</a></li>
+            <p><strong><u>8-24-24 Modern Alibi popup at The Gin Mill</u></strong></p>
+            <p><strong><u>9-6-24 Modern Alibi Acoustic Ft Camisole at Moo and Brew</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star-empty">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>9-7-24 Modern Alibi popup at The Gin Mill</u></strong></p>
+            <p><strong><u>9-13-24 Veaux and The Foxies at The Evening Muse</u></strong> 
+              <span class="stars">
+              <span class="star">⭐</span>
+              <span class="star">⭐</span>
+              <span class="star">⭐</span>
+              <span class="star">⭐</span>
+              <span class="star-empty">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>9-22-24 Modern Alibi popup at The Brickyard</u></strong></p>
+            <p><strong><u>10-4-24 Ashville Flood Benefit by Cigarettes @ Sunset Ft Motherwell Drive and Shelf Life </u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star-empty">⭐</span>
+                <span class="star-empty">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>10-6-24 Friday Pilot's Club ft Modern Alibi and OSTON at AMOS' Southend</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>10-18-24 Oceanic Ft Trash Panda at AMOS' Southend</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star-empty">⭐</span>
+                <span class="star-empty">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>10-26-24 Chase Atlantic Ft 24K Golden at Red Hat Ampitheatre</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>10-29-24 David Kushner Ft Henrik at The Fillmore</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+            </p>
+            <p><strong><u>12-31-24 NEW YEARS EVE with Modern Alibi Ft Deaf Andrews at The Neighborhood Theatre</u></strong> 
+              <span class="stars">
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+                <span class="star">⭐</span>
+              </span>
+            </p>
+        </div>
+        <div id="media" class="tab-content">
+            <h2>Media</h2>
+            <p>Photos, videos, and other media will be displayed here.</p>
+            <div id="media-gallery">
+                <!-- Media files will be displayed here -->
+                <h3>Photos</h3>
+                <img src="https://laurennngates.github.io/laurenmusicadventures/media/IMG_1256.jpg" alt="David Kushner at The Fillmore" style="width:100%;max-width:300px;">
+                
+                <h3>Videos</h3>
+                <video width="320" height="240" controls>
+                    <source src="https://raw.githubusercontent.com/laurennngates/laurenmusicadventures/main/media/IMG_3373.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </div>
+        </div>
+        <div id="bands" class="tab-content">
+            <h2>Bands</h2>
+            <p>Information about bands will be displayed here.</p>
+        </div>
+        <div id="about-me" class="tab-content">
+            <h2>About Me</h2>
+            <p>Hi, I'm Lauren</p>
+            <p>I'm a music enthusiast who loves to attend live shows. I started this website to share my experiences with others. My favorite genres to see live are rock, pop, and indie mixes of the two. I am very new to this and currently just playing around making this website. I hope you can find some good recommendations and enjoy!</p>
+        </div>
+        <div id="socials" class="tab-content">
+            <h2>Socials</h2>
+            <p>Follow Lauren on social media:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/lauren.gates.714/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/laurennngates/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.instagram.com/stories/highlights/17971106993703774/" target="_blank">Instagram 2025 Show Highlights</a></li>
+                <li><a href="https://www.instagram.com/stories/highlights/18131365075342226/" target="_blank">Instagram 2024 Show Highlights</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lauren's Live Music Adventures. All rights reserved.</p>
+    </footer>
+</body>
+</html>
