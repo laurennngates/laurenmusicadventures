@@ -57,17 +57,11 @@
       alert("YOU'VE BEEN RICKROLLED!");
     }
 
-    // Function to unmute the video
-    function unmuteVideo() {
-      const iframe = document.getElementById('rickroll');
-      iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-      showPopup(); // Trigger the popup after unmuting
-    }
-
-    // Try to unmute after a short delay
-    window.addEventListener('message', function() {
-      setTimeout(unmuteVideo, 3000);
-    });
+    // Delay the popup by 3 seconds (after video starts playing)
+    window.onload = function() {
+      setTimeout(showPopup, 3000); // Show the popup 3 seconds after the page loads
+    };
   </script>
 </body>
 </html>
+
