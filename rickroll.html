@@ -57,17 +57,13 @@
       alert("YOU'VE BEEN RICKROLLED!");
     }
 
-    // Delay the popup multiple times (after video starts playing)
+    // Show popups consecutively without delay
     window.onload = function() {
-      let count = 0;
-      const interval = setInterval(function() {
-        if (count < 5) {
-          showPopup();
-          count++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 3000); // Show the popup every 3 seconds
+      showPopup();  // First popup
+      showPopup();  // Second popup
+      showPopup();  // Third popup
+      showPopup();  // Fourth popup
+      showPopup();  // Fifth popup
     };
   </script>
 </body>
