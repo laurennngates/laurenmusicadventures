@@ -52,13 +52,19 @@
   </div>
 
   <script>
+    // Function to show the regular unformatted popup
+    function showPopup() {
+      alert("YOU'VE BEEN RICKROLLED!");
+    }
+
     // Function to unmute the video
     function unmuteVideo() {
       const iframe = document.getElementById('rickroll');
       iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+      showPopup(); // Trigger the popup after unmuting
     }
 
-    // Try to unmute after a short delay (may be blocked by browser)
+    // Try to unmute after a short delay
     window.addEventListener('message', function() {
       setTimeout(unmuteVideo, 3000);
     });
