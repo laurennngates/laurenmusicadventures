@@ -49,3 +49,45 @@
       padding: 20px;
       border: 2px solid black;
       z-index: 1000;
+    }
+
+    .popup button {
+      background-color: black;
+      color: red;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .popup button:hover {
+      background-color: red;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>YOU'VE BEEN HACKED</h1>
+  
+  <!-- Video Container -->
+  <div id="video-container">
+    <iframe
+      id="rickroll"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&enablejsapi=1"
+      allow="autoplay"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <!-- Popup Template -->
+  <div class="popup" id="rickrolled-popup">
+    <p>YOU'VE BEEN RICKROLLED!</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    let popupCounter = 0; // Counter to track the number of popups shown
+    let interval; // Declare interval variable to clear it later
+
+    // Function to show the popup
+    function showPopup() {
