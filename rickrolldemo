@@ -1,53 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rickroll Demo</title>
+  <meta charset="UTF-8">
+  <title>You’ve Been Hacked</title>
   <style>
     body {
+      background-color: red;
       margin: 0;
+      padding: 0;
+      text-align: center;
       font-family: Arial, sans-serif;
     }
-
-    .banner {
-      background-color: red;
+    h1 {
       color: black;
-      text-align: center;
       padding: 20px;
-      font-size: 36px;
-      font-weight: bold;
+      font-size: 3em;
+    }
+    iframe {
+      margin-top: 30px;
+      width: 560px;
+      height: 315px;
+      border: none;
     }
   </style>
 </head>
-<body onload="startRickroll()">
-
-  <!-- Red banner at the top -->
-  <div class="banner">You've been hacked</div>
-
-  <!-- Embedded YouTube Rickroll -->
-  <iframe width="100%" height="500" 
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-          title="Rickroll" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+<body>
+  <h1>You've been hacked</h1>
+  <iframe
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0"
+    allow="autoplay"
+    allowfullscreen>
   </iframe>
 
   <script>
-    function startRickroll() {
-      // Wait 5 seconds after page loads
-      setTimeout(() => {
-        // Rickroll popup spam
-        for (let i = 0; i < 7; i++) {
-          setTimeout(() => {
-            alert("You've been Rickrolled!");
-          }, i * 600);
-        }
-
-        // Devil face popup after
-        setTimeout(() => {
-          alert("😈");
-        }, 7 * 600 + 300);
-
-      }, 5000); // Delay to simulate "video started"
-    }
+    setTimeout(() => {
+      for (let i = 0; i < 7; i++) {
+        setTimeout(() => alert("You've been Rickrolled!"), i * 800);
+      }
+      setTimeout(() => alert("😈"), 7 * 800 + 800);
+    }, 4000); // delay to allow video to play for a few seconds
   </script>
+</body>
+</html>
 
 </body>
 </html>
