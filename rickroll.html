@@ -5,31 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>You've Been Hacked</title>
   <style>
+    /* Ensure full height red background */
     body {
       margin: 0;
+      padding: 0;
       background-color: red;
       color: black;
       text-align: center;
       font-family: Arial, sans-serif;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+
     h1 {
       padding: 20px;
       background-color: black;
       color: red;
       margin: 0;
     }
+
     #video-container {
       margin-top: 20px;
+      flex-grow: 1;
     }
+
     iframe {
       width: 90vw;
       height: 70vh;
       border: none;
     }
+
+    /* Popup styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      color: red;
+      padding: 20px;
+      border: 2px solid black;
+      z-index: 1000;
+    }
+
+    .popup button {
+      background-color: black;
+      color: red;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .popup button:hover {
+      background-color: red;
+      color: black;
+    }
   </style>
 </head>
 <body>
   <h1>YOU'VE BEEN HACKED</h1>
+  
+  <!-- Video Container -->
   <div id="video-container">
     <iframe
       id="rickroll"
@@ -39,17 +79,24 @@
     ></iframe>
   </div>
 
+  <!-- Popup 1 -->
+  <div class="popup" id="popup1">
+    <p>Welcome to your hacked page!</p>
+    <button onclick="closePopup('popup1')">Close</button>
+  </div>
+
+  <!-- Popup 2 -->
+  <div class="popup" id="popup2">
+    <p>Oops, looks like you fell for the trick. Get ready for more!</p>
+    <button onclick="closePopup('popup2')">Close</button>
+  </div>
+
   <script>
-    function unmuteVideo() {
-      const iframe = document.getElementById('rickroll');
-      iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+    // Function to show a specific popup
+    function showPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      popup.style.display = 'block';
     }
 
-    // Try to unmute after a short delay (may be blocked by browser)
-    window.addEventListener('message', function initYTListener() {
-      // Only attempt once YouTube iframe is ready
-      setTimeout(unmuteVideo, 3000);
-    });
-  </script>
-</body>
-</html>
+    // Function to close a specific popup
+    function closePopup
