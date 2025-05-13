@@ -1,28 +1,55 @@
-<div style="text-align: center; padding: 40px; background-color: red; color: black;">
-    <h1>You've been hacked</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You've Been Hacked</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: red;
+      color: black;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      padding: 20px;
+      background-color: black;
+      color: red;
+      margin: 0;
+    }
+    #video-container {
+      margin-top: 20px;
+    }
+    iframe {
+      width: 90vw;
+      height: 70vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>YOU'VE BEEN HACKED</h1>
+  <div id="video-container">
+    <iframe
+      id="rickroll"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&enablejsapi=1"
+      allow="autoplay"
+      allowfullscreen
+    ></iframe>
+  </div>
 
-<div id="video-container" style="text-align: center; margin-top: 40px;">
-    <button onclick="loadVideo()" style="font-size: 24px; padding: 15px 30px;">Play Video</button>
-</div>
+  <script>
+    function unmuteVideo() {
+      const iframe = document.getElementById('rickroll');
+      iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+    }
 
-<script>
-function loadVideo() {
-    const container = document.getElementById('video-container');
-    container.innerHTML = `
-        <iframe width="960" height="540"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-        <script>
-            for (let i = 0; i < 7; i++) {
-                setTimeout(() => alert("You've been Rickrolled"), i * 1000);
-            }
-            setTimeout(() => alert("😈"), 8000);
-        <\/script>
-    `;
-}
-</script>
+    // Try to unmute after a short delay (may be blocked by browser)
+    window.addEventListener('message', function initYTListener() {
+      // Only attempt once YouTube iframe is ready
+      setTimeout(unmuteVideo, 3000);
+    });
+  </script>
+</body>
+</html>
