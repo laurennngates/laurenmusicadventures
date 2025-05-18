@@ -57,13 +57,18 @@
       alert("YOU'VE BEEN RICKROLLED!");
     }
 
-    // Show popups consecutively without delay
+    // Show popups with small delay to allow (m) to send and unmute
     window.onload = function() {
-      showPopup();  // First popup
-      showPopup();  // Second popup
-      showPopup();  // Third popup
-      showPopup();  // Fourth popup
-      showPopup();  // Fifth popup
+  // Wait 10 seconds before starting popups
+  setTimeout(() => {
+    showPopup();  // First popup
+    showPopup();  // Second popup
+    showPopup();  // Third popup
+    showPopup();  // Fourth popup
+    showPopup();  // Fifth popup
+  }, 10000); // 10000 ms = 10 seconds delay
+};
+
     };
   </script>
 </body>
