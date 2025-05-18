@@ -54,18 +54,18 @@
   <script>
     // Function to show the regular unformatted popup
     function showPopup() {
-      alert("YOU'VE BEEN RICKROLLED!");
-    }
-
-    // Show popups with small delay to allow (m) to send and unmute
-window.onload = function() {
-  setTimeout(() => {
-    for (let i = 0; i < 5; i++) {
       alert("YOU'VE BEEN RICKROLLED!!");
     }
-  }, 10000); // 10 second delay before popups start
-};
 
+    window.onload = function() {
+  setTimeout(function() {
+    showPopup();
+    showPopup();
+    showPopup();
+    showPopup();
+    showPopup();
+  }, 5000); // 5 seconds delay
+};
 
     };
   </script>
