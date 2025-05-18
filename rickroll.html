@@ -58,16 +58,14 @@
     }
 
     // Show popups with small delay to allow (m) to send and unmute
-    window.onload = function() {
-  // Wait 10 seconds before starting popups
+window.onload = function() {
   setTimeout(() => {
-    showPopup();  // First popup
-    showPopup();  // Second popup
-    showPopup();  // Third popup
-    showPopup();  // Fourth popup
-    showPopup();  // Fifth popup
-  }, 10000); // 10000 ms = 10 seconds delay
+    for (let i = 0; i < 5; i++) {
+      alert("YOU'VE BEEN RICKROLLED!");
+    }
+  }, 10000); // 10 second delay before popups start
 };
+
 
     };
   </script>
