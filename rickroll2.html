@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You've Been Hacked</title>
+  <style>
+    /* Full red background */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: red;
+      color: black;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      padding: 20px;
+      background-color: black;
+      color: red;
+      margin: 0;
+    }
+
+    #video-container {
+      margin-top: 20px;
+      flex-grow: 1;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 70vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>YOU'VE BEEN HACKED</h1>
+  
+  <!-- Video Container -->
+  <div id="video-container">
+    <iframe
+      id="rickroll"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&enablejsapi=1"
+      allow="autoplay"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <!-- Load YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  
+  <script>
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('rickroll', {
+        events: {
+          'onReady': function(event) {
+            event.target.unMute();     // Unmute the video
+            event.target.playVideo();  // Make sure video plays
+          }
+        }
+      });
+    }
+
+    // Function to show the regular unformatted popup
+    function showPopup() {
+      alert("YOU'VE BEEN RICKROLLED!!");
+    }
+
+    // Show 5 popups after 5 seconds delay
+    window.onload = function() {
+      setTimeout(function() {
+        showPopup();
+        showPopup();
+        showPopup();
+        showPopup();
+        showPopup();
+      }, 5000);
+    };
+  </script>
+</body>
+</html>
