@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You've Been Hacked</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: red;
+      color: black;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      padding: 20px;
+      background-color: black;
+      color: red;
+      margin: 0;
+    }
+
+    #video-container {
+      margin-top: 20px;
+      flex-grow: 1;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 70vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>YOU'VE BEEN HACKED</h1>
+
+  <div id="video-container">
+    <iframe
+      id="rickroll"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&autoplay=1"
+      allow="autoplay"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    let player;
+
+    // YouTube API ready function
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('rickroll', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Show confirm dialog to simulate USB plug-in message
+      const userClicked = confirm("Your USB is successfully plugged in. Click OK to continue.");
+
+      if (userClicked) {
+        // User clicked OK - unmute and play video
+        player.unMute();
+        player.playVideo();
+
+        // Optionally start popups after unmuting/playing
+        setTimeout(() => {
+          for (let i = 0; i < 5; i++) {
+            alert("YOU'VE BEEN RICKROLLED!!");
+          }
+        }, 2000); // Delay popups 2 seconds after play
+      } else {
+        // User cancelled - keep video muted or do something else
+        alert("You cancelled. Video will stay muted.");
+      }
+    }
+  </script>
+</body>
+</html>
